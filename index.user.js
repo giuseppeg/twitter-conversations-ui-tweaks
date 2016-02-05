@@ -25,11 +25,20 @@
     left: 48px !important;\
     display: inline-block;\
     width: 95% !important;\
-    max-width: 690px;\
-    margin: 1em auto !important;\
+    max-width: 700px;\
+    margin: 10px auto !important;\
+    padding-left: 48px !important;\
     overflow-y: auto;\
     vertical-align: middle;\
     text-align: initial;\
+    pointer-events: none;\
+}\
+.PermalinkOverlay-content {\
+  pointer-events: initial;\
+}\
+.TweetArrows {\
+  left: 50% !important;\
+  margin-left: -400px !important;\
 }\
 .PermalinkProfile-dismiss,\
 .TweetArrows a,\
