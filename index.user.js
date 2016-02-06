@@ -7,31 +7,32 @@
 (function () {
   var styles = '\
 .PermalinkOverlay {\
-    top: 46px;\
-    background: rgba(255, 255, 255, .9);\
-    text-align: center;\
-    z-index: 999;\
+  top: 46px;\
+  background: rgba(255, 255, 255, .9);\
+  text-align: center;\
+  z-index: 999;\
+  overflow-y: auto;\
 }\
 .PermalinkOverlay:after {\
-    display: inline-block;\
-    vertical-align: middle;\
-    width: 0;\
-    height: 100%;\
-    content: "";\
+  display: inline-block;\
+  vertical-align: middle;\
+  width: 0;\
+  height: 100%;\
+  content: "";\
 }\
 .PermalinkOverlay-modal {\
-    position: relative !important;\
-    top: 0 !important;\
-    left: 48px !important;\
-    display: inline-block;\
-    width: 95% !important;\
-    max-width: 700px;\
-    margin: 10px auto !important;\
-    padding-left: 48px !important;\
-    overflow-y: auto;\
-    vertical-align: middle;\
-    text-align: initial;\
-    pointer-events: none;\
+  position: static !important;\
+  display: inline-block;\
+  width: 95% !important;\
+  max-width: 637px;\
+  margin: 10px auto !important;\
+  vertical-align: middle;\
+  text-align: initial;\
+  pointer-events: none;\
+}\
+.PermalinkOverlay .permalink {\
+  width: 100%;\
+  box-sizing: border-box;\
 }\
 .PermalinkOverlay-content {\
   pointer-events: initial;\
@@ -44,8 +45,8 @@
 .TweetArrows a,\
 .TweetArrows a:hover,\
 .TweetArrows a:focus {\
-    color: currentColor !important;\
-    opacity: 0.6;\
+  color: currentColor !important;\
+  opacity: 0.6;\
 }\
 .PermalinkProfile-dismiss:hover,\
 .PermalinkProfile-dismiss:focus,\
