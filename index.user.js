@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name twitter-conversations-ui-tweaks
 // @description A few CSS tweaks to the new Twitter conversations pop up.
-// @version 0.1.0
+// @version 0.1.1
 // @match https://twitter.com/*
 // ==/UserScript==
 (function () {
@@ -10,7 +10,6 @@
   top: 46px;\
   background: rgba(255, 255, 255, .9);\
   text-align: center;\
-  z-index: 999;\
   overflow-y: auto;\
 }\
 .PermalinkOverlay:after {\
@@ -30,7 +29,7 @@
   text-align: initial;\
   pointer-events: none;\
 }\
-.PermalinkOverlay .permalink {\
+.PermalinkOverlay .permalink-container {\
   width: 100%;\
   box-sizing: border-box;\
 }\
@@ -53,6 +52,12 @@
 .TweetArrows a:hover,\
 .TweetArrows a:focus {\
   opacity: 1;\
+}\
+.ThreadedPermalinkOverlay {\
+  border: 1px solid rgba(0,0,0,0.1) !important;\
+}\
+.overlay-enabled .topbar {\
+  z-index: 1011 !important;\
 }\
 ';
   javascript:document.body.insertAdjacentHTML('beforeEnd', ['<style>', styles, '</style>'].join(''))
