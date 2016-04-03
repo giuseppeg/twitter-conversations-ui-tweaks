@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name twitter-conversations-ui-tweaks
 // @description A few CSS tweaks to the new Twitter conversations pop up.
-// @version 0.1.1
+// @version 0.1.2
 // @match https://twitter.com/*
 // ==/UserScript==
 (function () {
@@ -60,5 +60,5 @@
   z-index: 1011 !important;\
 }\
 ';
-  javascript:document.body.insertAdjacentHTML('beforeEnd', ['<style>', styles, '</style>'].join(''))
+  document.body.insertAdjacentHTML('beforeEnd', ['<style>', styles, '</style>'].join(''))
 }());
